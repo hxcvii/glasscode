@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111210">
+  <meta name="description" content="GlassCode — practical UI components with complete HTML and CSS code.">
+  <title>GlassCode — Learn UI. Build Better.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{color-scheme:dark;--bg:#111210;--panel:#191a17;--text:#f1f0e9;--muted:#aaa99f;--gold:#c8ad78;--line:rgba(255,255,255,.11)}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;font-family:"DM Sans",sans-serif;color:var(--text);background:radial-gradient(ellipse at 80% 12%,rgba(185,151,91,.13),transparent 32%),radial-gradient(ellipse at 10% 85%,rgba(255,255,255,.045),transparent 35%),var(--bg)}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1080px,calc(100% - 44px));margin:auto}
+    header{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+    .brand{font-weight:700;letter-spacing:-.04em;font-size:21px}.brand span{color:var(--gold)}.nav{font-size:13px;color:var(--muted)}
+    main{padding:100px 0 88px}.eyebrow{color:var(--gold);font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:700}
+    h1{font-size:clamp(48px,8vw,88px);line-height:.98;letter-spacing:-.075em;max-width:760px;margin:22px 0}
+    h1 em{font-style:normal;color:var(--gold)}.intro{max-width:540px;color:var(--muted);line-height:1.8;font-size:16px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}.btn{padding:13px 19px;border-radius:7px;font-size:13px;font-weight:600;border:1px solid var(--line)}
+    .primary{background:var(--gold);color:#171611;border-color:var(--gold)}.secondary{color:var(--text)}
+    .section{border-top:1px solid var(--line);padding:26px 0 60px}.section-head{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:22px}
+    h2{font-size:20px;letter-spacing:-.04em}.tag{font-size:11px;color:var(--gold);border:1px solid rgba(200,173,120,.35);padding:7px 10px;border-radius:99px}
+    .project{display:grid;grid-template-columns:1.2fr 1fr;gap:30px;padding:26px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(135deg,rgba(255,255,255,.055),rgba(255,255,255,.015))}
+    .sample{min-height:230px;border-radius:10px;display:grid;place-items:center;background:radial-gradient(circle at 50% 50%,#484538,#20211e 65%,#171815)}
+    .glass{width:min(260px,80%);padding:24px;border:1px solid rgba(255,255,255,.35);border-radius:15px;background:rgba(255,255,255,.12);backdrop-filter:blur(14px);box-shadow:0 18px 45px rgba(0,0,0,.25)}
+    .glass small{color:#d7c49f;letter-spacing:.12em;text-transform:uppercase}.glass strong{display:block;font-size:23px;margin:12px 0 5px}.glass p{margin:0;color:#d8d6cf;font-size:12px}
+    .details{align-self:center}.details h3{font-size:25px;letter-spacing:-.05em;margin:0 0 12px}.details p{color:var(--muted);font-size:14px;line-height:1.8}.text-link{display:inline-block;color:var(--gold);font-size:13px;margin-top:12px}
+    footer{border-top:1px solid var(--line);padding:25px 0 36px;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    @media(max-width:700px){main{padding:75px 0 65px}.project{grid-template-columns:1fr;padding:16px}.sample{min-height:210px}.section-head{align-items:flex-start;flex-direction:column}header{height:70px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header><a class="brand" href="#">glass<span>code</span>.</a><a class="nav" href="https://www.instagram.com/glasscode.ir/">INSTAGRAM ↗</a></header>
+    <main>
+      <div class="eyebrow">UI components · HTML + CSS</div>
+      <h1>Learn UI.<br><em>Build Better.</em></h1>
+      <p class="intro">A growing library of practical interface components. Explore each example, understand how it works, and take the complete code into your next project.</p>
+      <div class="actions"><a class="btn primary" href="#components">Explore components</a><a class="btn secondary" href="https://www.instagram.com/glasscode.ir/">Follow on Instagram ↗</a></div>
+    </main>
+    <section class="section" id="components">
+      <div class="section-head"><h2>Featured component</h2><span class="tag">01 / GLASSMORPHISM</span></div>
+      <article class="project">
+        <div class="sample"><div class="glass"><small>GlassCode / UI 001</small><strong>Glass Card</strong><p>Clarity through layers.</p></div></div>
+        <div class="details"><h3>Glassmorphism Card</h3><p>A clean glass-effect card using transparency, backdrop blur, a soft border, and a restrained shadow. The example is responsive and easy to customize.</p><a class="text-link" href="components/glassmorphism-card/index.html">Open component demo ↗</a></div>
+      </article>
+    </section>
+    <footer><span>© 2026 GlassCode. Learn UI. Build Better.</span><span>Made for curious builders.</span></footer>
+  </div>
+</body>
+</html>
