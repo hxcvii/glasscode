@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111210">
+  <meta name="description" content="GlassCode UI 001 — responsive Glassmorphism Card with HTML and CSS source code.">
+  <title>Glassmorphism Card — GlassCode</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../../">glass<span>code</span>.</a>
+    <a class="back" href="../../">← Back to library</a>
+  </header>
+  <main>
+    <div class="eyebrow">UI COMPONENT · 001</div>
+    <h1>Glassmorphism <span>Card</span></h1>
+    <p class="intro">A soft glass surface built with transparency, backdrop blur, a delicate border and subtle depth.</p>
+    <section class="demo" aria-label="Live component preview">
+      <div class="orb orb-a"></div><div class="orb orb-b"></div>
+      <article class="glass-card">
+        <div class="card-top"><span class="mark">G.</span><span class="number">GLASSCODE / 001</span></div>
+        <div class="symbol">✳</div>
+        <p class="label">DESIGN WITH CLARITY</p>
+        <h2>Less noise.<br><em>More feeling.</em></h2>
+        <p class="description">A little transparency can change the whole interface.</p>
+        <a class="card-link" href="#source">Explore the code <span>↗</span></a>
+      </article>
+      <span class="demo-note">LIVE PREVIEW · RESPONSIVE</span>
+    </section>
+    <section class="source" id="source">
+      <div class="source-heading">
+        <div><div class="eyebrow">TAKE IT & BUILD</div><h2>Complete source code</h2></div>
+        <a class="raw-link" href="style.css" target="_blank" rel="noopener">Open CSS file ↗</a>
+      </div>
+      <div class="code-card">
+        <div class="code-head"><span>HTML</span><button type="button" data-copy="html-code">Copy HTML</button></div>
+        <pre><code id="html-code">&lt;article class="glass-card"&gt;
+  &lt;div class="card-top"&gt;
+    &lt;span class="mark"&gt;G.&lt;/span&gt;
+    &lt;span class="number"&gt;GLASSCODE / 001&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class="symbol"&gt;✳&lt;/div&gt;
+  &lt;p class="label"&gt;DESIGN WITH CLARITY&lt;/p&gt;
+  &lt;h2&gt;Less noise.&lt;br&gt;&lt;em&gt;More feeling.&lt;/em&gt;&lt;/h2&gt;
+  &lt;p class="description"&gt;A little transparency can change the whole interface.&lt;/p&gt;
+  &lt;a class="card-link" href="#"&gt;Explore the code &lt;span&gt;↗&lt;/span&gt;&lt;/a&gt;
+&lt;/article&gt;</code></pre>
+      </div>
+      <div class="code-card">
+        <div class="code-head"><span>CSS</span><button type="button" data-copy="css-code">Copy CSS</button></div>
+        <pre><code id="css-code">.glass-card {
+  width: min(100%, 390px);
+  padding: 34px;
+  border: 1px solid rgba(255,255,255,.23);
+  border-radius: 22px;
+  background: rgba(255,255,255,.10);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 24px 80px rgba(0,0,0,.28),
+              inset 0 1px 0 rgba(255,255,255,.12);
+}</code></pre>
+      </div>
+      <p class="hint">Tip: For the full visual, use the HTML structure above together with the complete <a href="style.css" target="_blank" rel="noopener">style.css file</a>.</p>
+      <p class="copy-status" aria-live="polite"></p>
+    </section>
+  </main>
+  <footer><span>© 2026 GlassCode</span><a href="https://www.instagram.com/glasscode.ir/" target="_blank" rel="noopener">@glasscode.ir ↗</a></footer>
+  <script>
+    document.querySelectorAll("[data-copy]").forEach(button => {
+      button.addEventListener("click", async () => {
+        const target = document.getElementById(button.dataset.copy);
+        try {
+          await navigator.clipboard.writeText(target.innerText);
+          button.textContent = "Copied ✓";
+        } catch {
+          button.textContent = "Select code to copy";
+        }
+        window.setTimeout(() => button.textContent = button.dataset.copy === "html-code" ? "Copy HTML" : "Copy CSS", 1800);
+      });
+    });
+  </script>
+</body>
+</html>
